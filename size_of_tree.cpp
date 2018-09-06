@@ -19,17 +19,7 @@ Node *newNode(int data)
 
 int sizeoftree(Node *root)
 {
-    int leftSize = 0, rightSize = 0;
-    if (root == NULL)
-        return 0;
-
-    if (root->left != NULL)
-        leftSize = sizeoftree(root->left);
-
-    if (root->right != NULL)
-        rightSize = sizeoftree(root->right);
-
-    return 1 + leftSize + rightSize;
+    return (root!=NULL)?1 + sizeoftree(root->left) + sizeoftree(root->right):0;
 }
 Node *contructTree()
 {

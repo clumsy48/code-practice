@@ -4,9 +4,16 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "echo",
+            "label": "build tree",
             "type": "shell",
-            "command": "echo Hello"
+            "command": "g++",
+            "args": [
+                "-g", "size_of_tree.cpp"
+            ],
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            }
         }
     ]
 }

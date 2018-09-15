@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "size_of_tree.cpp"
+                "-g", "kdistance.cpp"
             ],
             "group": {
                 "kind": "build",

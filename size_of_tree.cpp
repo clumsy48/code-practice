@@ -6,7 +6,7 @@ using namespace std;
 Node *newNode(int data)
 {
     // Allocate memory for new node
-    struct Node *node = (struct Node *)malloc(sizeof(Node));
+    Node *node = (Node *)malloc(sizeof(Node));
 
     // Assign data to this node
     node->data = data;
@@ -19,7 +19,7 @@ Node *newNode(int data)
 
 int sizeoftree(Node *root)
 {
-    return (root!=NULL)?1 + sizeoftree(root->left) + sizeoftree(root->right):0;
+    return (root != NULL) ? 1 + sizeoftree(root->left) + sizeoftree(root->right) : 0;
 }
 Node *contructTree()
 {
@@ -40,4 +40,3 @@ int main()
 
     return 0;
 }
-

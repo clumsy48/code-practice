@@ -6,7 +6,7 @@ using namespace std;
 Node *newNode(int data)
 {
     // Allocate memory for new node
-    struct Node *node = (struct Node *)malloc(sizeof(Node));
+    Node *node = (Node *)malloc(sizeof(Node));
 
     // Assign data to this node
     node->data = data;
@@ -17,7 +17,7 @@ Node *newNode(int data)
     return (node);
 }
 
-bool checkIdentical(Node *root1, Node *root2)
+bool checkIdentical( Node *root1, Node *root2)
 {
     if (root1 == NULL && root2 == NULL)
         return true;
@@ -27,7 +27,7 @@ bool checkIdentical(Node *root1, Node *root2)
     }
     return false;
 }
-void printTree(Node *root)
+void printTree( Node *root)
 {
     if (root != NULL)
     {

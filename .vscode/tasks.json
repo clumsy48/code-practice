@@ -8,7 +8,7 @@
             "type": "shell",
             "command": "g++",
             "args": [
-                "-g", "kdistance.cpp"
+                "-g", "lcaBTree.cpp"
             ],
             "group": {
                 "kind": "build",

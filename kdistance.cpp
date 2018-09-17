@@ -44,19 +44,19 @@ int printKDistance(Node *root ,int distance,int key){
     if(root == NULL ) return -1;
     if(root->data == key){
         printKDistanceFromRoot(root,distance);
-        return 0;
+        return 1;
     }
     int lt = printKDistance(root->left,distance,key);
     if(lt != -1){
-        if(0 == distance-lt-1) cout << root->data << endl;
-        else printKDistanceFromRoot(root->right,distance-lt-2);
-        return lt+1;
+        if(0 == distance-lt) cout << root->data << endl;
+        else printKDistanceFromRoot(root->right,distance-lt-1);
+        return lt;
     }
     int rt = printKDistance(root->right,distance,key);
      if(rt != -1){
-        if(0 == distance-rt-1) cout << root->data << endl;
-        else printKDistanceFromRoot(root->left,distance-rt-2);
-        return rt+1;
+        if(0 == distance-rt) cout << root->data << endl;
+        else printKDistanceFromRoot(root->left,distance-rt-1);
+        return rt;
     }
     return -1;
 }
